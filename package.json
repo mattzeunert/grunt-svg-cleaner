@@ -1,0 +1,31 @@
+{
+  "name": "grunt-svg-cleaner",
+  "version": "1.0.0",
+  "description": "Grunt task to compress SVG files, based on svg-cleaner.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattzeunert/grunt-svg-cleaner.git"
+  },
+  "keywords": [
+    "svg",
+    "minify",
+    "gruntplugin",
+    "image",
+    "optimizer",
+    "vector",
+    "graphic"
+  ],
+  "author": "Matt Zeunert",
+  "license": "CC-0",
+  "bugs": {
+    "url": "https://github.com/mattzeunert/grunt-svg-cleaner/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13"
+  }
+}
