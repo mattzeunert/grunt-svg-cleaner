@@ -39,7 +39,8 @@ module.exports = function(grunt) {
       },
       folder: {
         files: {
-          'tmp/folder': 'test/fixtures/folder/*.svg'
+          'tmp/folder': 'test/fixtures/folder/*.svg',
+          'tmp/folder-2': 'test/fixtures/folder-2/*.svg'
         }
       }
     },

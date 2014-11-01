@@ -28,19 +28,24 @@ exports.svg_cleaner = {
     done();
   },
   default_options: function(test) {
-    test.expect(3);
+    test.expect(5);
 
-    var actual = grunt.file.read('tmp/default_options');
-    var expected = grunt.file.read('test/expected/default_options');
-    test.equal(actual, expected, '');
+    var paths = [
+      'default_options',
+      'folder/file-1.svg',
+      'folder/file-2.svg',
+      'folder-2/file-1.svg',
+      'folder-2/file-2.svg'
+    ];
 
-    actual = grunt.file.read('tmp/folder/file-1.svg');
-    expected = grunt.file.read('test/expected/folder/file-1.svg');
-    test.equal(actual, expected, '');
+    var actual, expected, path;
 
-    actual = grunt.file.read('tmp/folder/file-2.svg');
-    expected = grunt.file.read('test/expected/folder/file-2.svg');
-    test.equal(actual, expected, '');
+    for (var i=0; i<paths.length; i++){
+      path = paths[i];
+      actual = grunt.file.read('tmp/' + path);
+      expected = grunt.file.read('test/expected/' + path);
+      test.equal(actual, expected, '');
+    }
 
     test.done();
   },
