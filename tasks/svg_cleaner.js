@@ -9,6 +9,8 @@
 'use strict';
 
 var eachAsync = require('each-async');
+var svgCleaner = require('svg-cleaner');
+var path = require('path');
 
 module.exports = function(grunt) {
 
@@ -16,18 +18,11 @@ module.exports = function(grunt) {
     // creation: http://gruntjs.com/creating-tasks
 
     grunt.registerMultiTask('svg_cleaner', 'Grunt task to compress SVG files, based on svg-cleaner.', function() {
-        var done = this.async();
+        this.files.forEach(function(file, i){
+            grunt.file.mkdir(file.dest);
 
-        eachAsync(this.files, function (file, i, next) {
-            var content = grunt.file.read(file.src[0]);
-
-            grunt.file.write(file.dest, content);
-            next();
-        }, function () {
-            done();
+            svgCleaner.cleanFile(file.src[0], file.dest + '/' + path.basename(file.src[0]));
         });
-
-
     });
 
 };
