@@ -1,7 +1,7 @@
 {
   "name": "grunt-svg-cleaner",
   "description": "Grunt task to compress SVG files, based on svg-cleaner.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/mattzeunert/grunt-svg-cleaner",
   "author": {
     "name": "Matt Zeunert",
