@@ -32,7 +32,15 @@ exports.svg_cleaner = {
 
     var actual = grunt.file.read('tmp/default_options');
     var expected = grunt.file.read('test/expected/default_options');
-    test.equal(actual, expected, 'should describe what the default behavior is.');
+    test.equal(actual, expected, '');
+
+    actual = grunt.file.read('tmp/folder/file-1.svg');
+    expected = grunt.file.read('test/expected/folder/file-1.svg');
+    test.equal(actual, expected, '');
+
+    actual = grunt.file.read('tmp/folder/file-2.svg');
+    expected = grunt.file.read('test/expected/folder/file-2.svg');
+    test.equal(actual, expected, '');
 
     test.done();
   },
