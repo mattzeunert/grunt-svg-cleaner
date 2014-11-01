@@ -35,6 +35,11 @@ module.exports = function(grunt) {
         },
         files: {
           'tmp': ['test/fixtures/default_options']
+        },
+      },
+      folder: {
+        files: {
+          'tmp/folder': 'test/fixtures/folder/*.svg'
         }
       }
     },

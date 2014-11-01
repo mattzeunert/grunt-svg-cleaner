@@ -18,11 +18,17 @@ module.exports = function(grunt) {
     // creation: http://gruntjs.com/creating-tasks
 
     grunt.registerMultiTask('svg_cleaner', 'Grunt task to compress SVG files, based on svg-cleaner.', function() {
+      console.log('---');
         this.files.forEach(function(file, i){
-            grunt.file.mkdir(file.dest);
+          var destFolder = file.dest;
+          grunt.file.mkdir(destFolder);
+          file.src.forEach(function(src){
+              svgCleaner.cleanFile(src, destFolder + '/' + path.basename(src));
+          });
+          console.log(file.src[0]);
 
-            svgCleaner.cleanFile(file.src[0], file.dest + '/' + path.basename(file.src[0]));
         });
+        console.log('---');
     });
 
 };

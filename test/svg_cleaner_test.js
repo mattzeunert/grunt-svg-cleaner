@@ -28,7 +28,7 @@ exports.svg_cleaner = {
     done();
   },
   default_options: function(test) {
-    test.expect(1);
+    test.expect(3);
 
     var actual = grunt.file.read('tmp/default_options');
     var expected = grunt.file.read('test/expected/default_options');
