@@ -44,5 +44,9 @@
     "optimizer",
     "vector",
     "graphic"
-  ]
+  ],
+  "dependencies": {
+    "svg-cleaner": "0.0.3",
+    "each-async": "~1.1.0"
+  }
 }
